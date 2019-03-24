@@ -4,20 +4,18 @@
 import random
 
 def flip():
-    random.randint(1,2)
-    heads=0
-    tails=0
+    return(random.randint(1,2))
+
+heads = 0
+tails = 0
 
 for i in range(100):
     flip()
-    if flip == 1:
+    if flip() == 1:
         heads += 1
-        print(heads)
-    if flip == 2:
+    else:
         tails += 1
-        print(tails)
 
-print("Total:\n ", heads, "were heads and...")
-print(tails, " were tails.")
-
+print("RESULT: \nOut of 100 coin flips... \n",heads, " were Heads. \n",tails, " were Tails.")
+    
 input("\n\nPress Enter to Exit")
